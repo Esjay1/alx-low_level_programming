@@ -4,14 +4,12 @@
  * print_rev - displas a string in reverse
  *
  * @s: the string pointer
- * @i: individual string character
  *
  * Return: void
  */
 void print_rev(char *s)
 {
 	int len;
-	int i;
 
 	len = 0;
 	while (s[len] != '\0')
