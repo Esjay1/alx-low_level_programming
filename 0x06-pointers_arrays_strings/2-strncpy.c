@@ -7,28 +7,24 @@
  * @n: number of characters of string to copy
  * Return: display the copied string.
  */
-
-
 char *_strncpy(char *dest, char *src, int n)
-{
-	int i;
 
-	while (src[i] != '\0')
+{
+	int len;
+	int src_len;
+
+	len = 0;
+	src_len = 0;
+	while ((dest[len] != '\0') && (src_len < n))
 	{
-		for (i = 0; i < n && src[i] != '\0'; i++)
-		{
-			dest[i] = src[i];
-		}
+		dest[len] = src[src_len];
+		len++;
+		src_len++;
 	}
-	for ( ; i < n; i++)
+	while (dest[len] != '\0')
 	{
-		dest[i] = '\0';
+		len++;
 	}
-	if (dest[i] != '\0')
-	{
-		return (dest);
-	}
-	else
-	{
-		_putchar('\0');
+	dest[len] = '\0';
+	return (dest);
 }
