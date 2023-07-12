@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int cents;
-	int counter;
+	int counter = 0;
 
 	if (argc > 2 || argc == 1)
 	{
@@ -21,10 +21,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	cents = atoi(argv[1]);
-	counter = 0;
 	if (cents < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 	while (cents > 0)
 	{
