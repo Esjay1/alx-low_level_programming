@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <stdio.lib>
 
 /**
  * main - program that prints the arguments it receives
@@ -12,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-
+	
 	for (i = 0; i < argc; i++)
 	{
 		argv[i] = argv[i];
