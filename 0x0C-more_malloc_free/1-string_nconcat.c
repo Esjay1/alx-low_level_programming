@@ -17,11 +17,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = " ";
 	}
-	if (s2 == NULL)
+	else if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = " ";
 	}
 	lens1 = 0;
 	while (s1[lens1] != '\0')
@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = lens2;
 	}
 	sum = lens1 + n + 1;
-	pointer = malloc(sum * sizeof(char));
+	pointer = malloc(sum);
 	if (pointer == NULL)
 	{
 		return (NULL);
