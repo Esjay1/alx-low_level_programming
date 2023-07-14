@@ -3,6 +3,24 @@
 #include <stdlib.h>
 
 /**
+ * length - computes the length of a string
+ * @t: pointer to the string
+ *
+ * Return: the string length.
+ */
+int length(char *t)
+{
+	int i;
+
+	i = 0;
+	while (t[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * string_nconcat - concatenetes the first sting and n numbers of second
  * string
  * @s1: first string pointer
@@ -13,32 +31,24 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int sum, x, y, lens1, lens2;
-	char* pointer;
+	char *pointer;
 
 	if (s1 == NULL)
 	{
 		s1 = "";
 	}
-	else if (s2 == NULL)
+	if (s2 == NULL)
 	{
 		s2 = "";
 	}
-	lens1 = 0;
-	while (s1[lens1] != '\0')
-	{
-		lens1++;
-	}
-	lens2 = 0;
-	while (s2[lens2] != '\0')
-	{
-		lens2++;
-	}
+	lens1 = length(s1);
+	lens2 = length(s2);
 	if (n >= lens2)
 	{
 		n = lens2;
 	}
 	sum = lens1 + n + 1;
-	pointer = malloc(sum * sizeof(char));
+	pointer = malloc(sum);
 	if (pointer == NULL)
 	{
 		return (NULL);
