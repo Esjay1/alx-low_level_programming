@@ -1,5 +1,5 @@
-#ifndef DOG
-#define DOG
+#ifndef _DOG_
+#define _DOG_
 
 /**
  * struct dog - for storing a dog's data
