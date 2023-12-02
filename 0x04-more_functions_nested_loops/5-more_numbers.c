@@ -14,11 +14,11 @@ void more_numbers(void)
 
 	start = 0;
 	stop = 14;
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		for (j = start; j <= stop; j++)
 		{
-			_putchar(j + '0');
+			_putchar(j);
 		}
 		_putchar('\n');
 	}
