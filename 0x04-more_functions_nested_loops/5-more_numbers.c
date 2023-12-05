@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * more_numbers - display numbers 10 times
@@ -7,20 +8,18 @@
  */
 void more_numbers(void)
 {
-	int i;
+	int i = 0;
+	char start[] = {"01234567891011121314"};
 	int j;
-	int start;
-	int stop;
 
-	start = 0;
-	stop = 14;
-	for (i = 0; i <= 9; i++)
+	for (j = 0; j <= 9; j++)
 	{
-		for (j = start; j <= stop; j++)
+		while (start[i] != '\0')
 		{
-			_putchar(j);
+			_putchar(start[i]);
+			i++;
 		}
 		_putchar('\n');
+		i = 0;
 	}
-	_putchar('\n');
 }
