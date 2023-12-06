@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
  * main - highlights multiples of 3 and 5
