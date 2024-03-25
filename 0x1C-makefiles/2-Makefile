@@ -3,7 +3,7 @@ SRC := $(wildcard *.c)
 OBJ := $(SRC:.c=.o)
 NAME := school
 
-all : $(NAME)
+all : school
 
 $(NAME) : $(OBJ) 
 	${CC} $^ -o $@
