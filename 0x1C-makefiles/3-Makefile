@@ -10,4 +10,13 @@ $(NAME) : $(OBJ)
 
 %.o : %.c
 	${CC} -c -o $@ $<
-
+clean : 
+	rm -vf .*.sw[a-z] school
+oclean :
+	rm -vf *.o
+fclean :
+	rm -vf .*.sw[a-z] school *.o
+re :
+	rm -f *.o
+$RM :
+	
