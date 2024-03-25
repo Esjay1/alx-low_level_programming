@@ -6,11 +6,13 @@ SRC := $(wildcard *.c)
 OBJ := $(SRC:.c=.o)
 NAME := school
 
+#the rules
+
 all : $(NAME)
 
 $(NAME) : $(OBJ) 
 	${CC} $^ -o $@
 
 %.o : %.c
-	${CC} -c $<
+	${CC} -c $< -o $@
 
