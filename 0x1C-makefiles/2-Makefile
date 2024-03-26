@@ -1,16 +1,15 @@
 CC = gcc
 SRC = $(wildcard *.c) 
 OBJ = $(SRC:.c=.o)
-NAME = school$(date)
+NAME = school
 
 .PHONY = all
 
 all : $(NAME)
-	${CC} ${OBJ} -o school
 
-$(NAME) : $(OBJ) 
-	${CC} $^ -o $@
+$(NAME) : $(OBJ)
+	$(CC) $^ -o $@
 
 %.o : %.c
-	${CC} -c -o $@ $<
+	${CC} -c $< -o $@
 
