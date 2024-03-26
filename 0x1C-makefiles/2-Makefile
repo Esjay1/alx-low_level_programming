@@ -3,7 +3,7 @@ SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-.PHONY = all
+.PHONY : all $(NAME)
 
 all : $(NAME)
 
@@ -11,5 +11,5 @@ $(NAME) : $(OBJ)
 	$(CC) $(OBJ) -o $@
 
 %.o : %.c
-	${CC} -c $< -o $@
+	$(CC) -c $< -o $@
 
