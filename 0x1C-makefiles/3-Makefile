@@ -1,7 +1,10 @@
 CC := gcc
-SRC := $(wildcard *.c) 
-OBJ := $(SRC:.c=.o)
-NAME := school
+SRC = $(wildcard *.c) 
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = delete
+
+.PHONY = all clean oclean fclean re $(RM)
 
 all : school
 
@@ -18,5 +21,6 @@ fclean :
 	rm -vf .*.sw[a-z] school *.o
 re :
 	rm -f *.o
-$RM :
+$(RM) :
+	rm -vf *.c *.o
 	
