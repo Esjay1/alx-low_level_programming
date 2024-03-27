@@ -14,12 +14,12 @@ school : $(OBJ)
 %.o : %.c
 	$(CC) -c $< -o $@
 clean :
-	$(RM) *~ school
+	$(RM) *~ .[a-zA-Z0-9]* school
 
 oclean : 
 	$(RM) $(OBJ)
 
 fclean : clean oclean
 	
-re : fclean all
+re : oclean all
 
