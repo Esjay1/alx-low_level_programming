@@ -14,7 +14,7 @@ school : $(OBJ)
 %.o : %.c
 	$(CC) -c $< -o $@
 clean :
-	$(RM) *~ .[a-zA-Z0-9]* school
+	$(RM) *~ .[a-zA-Z0-9]* $(NAME)
 
 oclean : 
 	$(RM) $(OBJ)
